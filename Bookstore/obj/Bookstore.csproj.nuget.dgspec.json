@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/seungeunlee/Projects/mission8/Bookstore/Bookstore.csproj": {}
+    "/Users/seungeunlee/Projects/mission9/Bookstore/Bookstore.csproj": {}
   },
   "projects": {
-    "/Users/seungeunlee/Projects/mission8/Bookstore/Bookstore.csproj": {
+    "/Users/seungeunlee/Projects/mission9/Bookstore/Bookstore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/seungeunlee/Projects/mission8/Bookstore/Bookstore.csproj",
+        "projectUniqueName": "/Users/seungeunlee/Projects/mission9/Bookstore/Bookstore.csproj",
         "projectName": "Bookstore",
-        "projectPath": "/Users/seungeunlee/Projects/mission8/Bookstore/Bookstore.csproj",
+        "projectPath": "/Users/seungeunlee/Projects/mission9/Bookstore/Bookstore.csproj",
         "packagesPath": "/Users/seungeunlee/.nuget/packages/",
-        "outputPath": "/Users/seungeunlee/Projects/mission8/Bookstore/obj/",
+        "outputPath": "/Users/seungeunlee/Projects/mission9/Bookstore/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/seungeunlee/.config/NuGet/NuGet.Config"
