@@ -1,0 +1,54 @@
+﻿@page
+@model Bookstore.Pages.ShoppingCartModel
+@{
+}
+
+<h1> Your Shopping Cart </h1>
+
+<table class="table table-bordered table-striped">
+
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Subtotal</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var i in Model.basket.Items)
+         {
+            <tr>
+                <td>@i.Books.Title</td>
+                <td>@i.Quantity</td>
+                <td>$@i.Books.Price</td>
+                <td>$@((i.Quantity * @i.Books.Price).ToString("#,##0.00"))</td>
+
+                <td class="text-center">
+                    <form method="post" asp-page-handler="Remove">
+                        <input type="hidden" name="bookId" value="@i.Books.BookId" />
+                        <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+                        <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                    </form>
+                </td>
+            </tr>
+
+         }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">Total: </td>
+            <td>$@Model.basket.CalculateTotal().ToString("#,##0.00")</td>
+        </tr>
+
+    </tfoot>
+
+</table>
+
+<div>
+    <a class="btn btn-primary" href="@Model.ReturnUrl">Continue Shopping</a>
+    <a class="btn btn-primary" asp-controller="Shopping" asp-action="Checkout">Checkout</a>
+</div>
+
